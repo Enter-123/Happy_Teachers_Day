@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Teacher's Day 🌼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient background layers -->
+  <div class="bg-glow bg-glow--one"></div>
+  <div class="bg-glow bg-glow--two"></div>
+  <div class="chalk-noise"></div>
+  <div id="petal-field" class="petal-field" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">
+        <span class="nav__brand-mark">🌸</span>
+        <span class="nav__brand-text">Teacher&rsquo;s&nbsp;Day</span>
+      </a>
+      <nav class="nav__links">
+        <a href="#wall">The Wall</a>
+        <a href="#note">A Note</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <p class="hero__eyebrow">05&nbsp;September&nbsp;·&nbsp;A day drawn in chalk &amp; marigold</p>
+    <h1 class="hero__title">
+      Happy <em>Teacher&rsquo;s</em> Day
+    </h1>
+    <svg class="hero__underline" viewBox="0 0 720 40" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M6 26 C 140 4, 280 40, 420 20 S 640 4, 714 22" />
+    </svg>
+    <p class="hero__subtitle">
+      Every subject taught was really a lesson in patience.<br class="hero__break">
+      Today, the blackboard belongs to <em>them</em>.
+    </p>
+    <a href="#wall" class="hero__cta">
+      <span>Meet the teachers</span>
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <div class="chalk-strip" aria-hidden="true">
+      <span>Patience</span><span>&middot;</span><span>Guidance</span><span>&middot;</span><span>Kindness</span><span>&middot;</span><span>Chalk dust</span><span>&middot;</span><span>Red ink</span><span>&middot;</span><span>Second chances</span><span>&middot;</span>
+    </div>
+  </section>
+
+  <!-- Wall of teachers -->
+  <section id="wall" class="wall">
+    <div class="wall__head">
+      <span class="wall__eyebrow">The Staff Room Wall</span>
+      <h2 class="wall__title">Tap a face to open their card</h2>
+      <p class="wall__sub">Twenty teachers, twenty small tributes — what we love, what we hope for, and who they are underneath the syllabus.</p>
+    </div>
+
+    <div id="teacher-grid" class="grid">
+      <!-- Cards are injected by script.js from the `teachers` array -->
+    </div>
+  </section>
+
+  <!-- Closing note -->
+  <section id="note" class="closing">
+    <div class="closing__card">
+      <span class="closing__mark">”</span>
+      <p class="closing__text">A teacher affects eternity; no one can tell where their influence stops.</p>
+      <p class="closing__attr">— Henry Adams</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Made with chalk dust and gratitude, for every teacher who stayed five minutes after the bell. 🌼</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal-backdrop" class="modal-backdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button id="modal-close" class="modal__close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="modal__top">
+        <div class="modal__photo-wrap">
+          <img id="modal-photo" class="modal__photo" src="" alt="">
+          <span id="modal-emblem" class="modal__emblem" aria-hidden="true"></span>
+        </div>
+        <div class="modal__heading">
+          <span id="modal-subject" class="modal__subject"></span>
+          <h3 id="modal-name" class="modal__name"></h3>
+          <p id="modal-personality-line" class="modal__personality-line"></p>
+        </div>
+      </div>
+
+      <div class="modal__body">
+        <div class="modal__block modal__block--love">
+          <div class="modal__block-icon">💛</div>
+          <div>
+            <h4>What students love</h4>
+            <p id="modal-love"></p>
+          </div>
+        </div>
+
+        <div class="modal__block modal__block--grow">
+          <div class="modal__block-icon">🌱</div>
+          <div>
+            <h4>One thing students hope for</h4>
+            <p id="modal-grow"></p>
+          </div>
+        </div>
+
+        <div class="modal__block modal__block--soul">
+          <div class="modal__block-icon" id="modal-soul-icon">🌻</div>
+          <div>
+            <h4>If they were a flower or animal</h4>
+            <p id="modal-soul"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
